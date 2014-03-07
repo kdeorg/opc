@@ -1,0 +1,26 @@
+program hello;
+type 
+mytype= 0..5;
+seq = (aa, bb, cc, dd);
+const x = -111;
+y = -x;
+yy = +x;
+z = 333;
+zz = z;
+var a: Integer;
+bseq: (aaa, bbb, ccc, ddd);
+b: Integer;
+c: mytype;
+m: Rational;
+v: Integer;
+begin
+a:= 100;
+b:= 1000;
+c:= a;
+m.numerator:=50;
+m.denominator:=100;
+v:=m.numerator+a*b;
+bseq := aaa;
+if x = -111 then a := a + a
+else b := b + b;
+end.

@@ -1,0 +1,6 @@
+LEX
+*.o
+*.user
+*-res.*
+Makefile
+*~

@@ -1,0 +1,8 @@
+LEX
+*.o
+*.user
+*-res.*
+Makefile
+*~
+moc_*
+SynTree

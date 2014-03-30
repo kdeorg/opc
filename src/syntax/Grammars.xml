@@ -1,0 +1,1044 @@
+<XML>
+    <GRAMMARS>
+        <GRAMMAR name="GRAMMAR_OPERATION">
+            <NON_TERMINALS>
+                <NON_TERMINAL>OPERATION</NON_TERMINAL>
+                <NON_TERMINAL>OPERAND_ADD</NON_TERMINAL>
+                <NON_TERMINAL>OPERATIONTALE</NON_TERMINAL>
+                <NON_TERMINAL>OPERAND_MUL</NON_TERMINAL>
+                <NON_TERMINAL>OPERAND_ADDTALE</NON_TERMINAL>
+                <NON_TERMINAL>SPECO</NON_TERMINAL>
+                <NON_TERMINAL>OPCOMDEN</NON_TERMINAL>
+                <NON_TERMINAL>OPERAND_MUL_VTALE</NON_TERMINAL>
+                <NON_TERMINAL>OPERAND_MUL_TALE</NON_TERMINAL>
+                <NON_TERMINAL>OPERAND_MUL_VTALESP0</NON_TERMINAL>
+                <NON_TERMINAL>ARRNUMS</NON_TERMINAL>
+                <NON_TERMINAL>ARRNUM</NON_TERMINAL>
+                <NON_TERMINAL>ARRNUMTALE</NON_TERMINAL>
+                <NON_TERMINAL>OPERAND_MUL_UNS</NON_TERMINAL>
+            </NON_TERMINALS>
+            <TERMINALS>
+                <TERMINAL>OPAR0</TERMINAL>
+                <TERMINAL>OPAR1</TERMINAL>
+                <TERMINAL>OPMUL0</TERMINAL>
+                <TERMINAL>OPMUL1</TERMINAL>
+                <TERMINAL>SPO0</TERMINAL>
+                <TERMINAL>SPC0</TERMINAL>
+                <TERMINAL>SCOM0</TERMINAL>
+                <TERMINAL>SP0</TERMINAL>
+                <TERMINAL>KNUM</TERMINAL>
+                <TERMINAL>KDEN</TERMINAL>
+                <TERMINAL>KINT</TERMINAL>
+                <TERMINAL>KFRC</TERMINAL>
+                <TERMINAL>KSIM</TERMINAL>
+                <TERMINAL>CINT</TERMINAL>
+                <TERMINAL>ID</TERMINAL>
+                <TERMINAL>SBKO0</TERMINAL>
+                <TERMINAL>SBKC0</TERMINAL>
+                <TERMINAL>KCD</TERMINAL>
+            </TERMINALS>
+            <RULES>
+                <RULE id="1">
+                    <LEFT>OPERATION</LEFT>
+                    <RIGHT id="1">OPAR0</RIGHT>
+                    <RIGHT id="2">OPERAND_ADD</RIGHT>
+                    <RIGHT id="3">OPERATIONTALE</RIGHT>
+                </RULE>
+                <RULE id="2">
+                    <LEFT>OPERATION</LEFT>
+                    <RIGHT id="1">OPAR1</RIGHT>
+                    <RIGHT id="2">OPERAND_ADD</RIGHT>
+                    <RIGHT id="3">OPERATIONTALE</RIGHT>
+                </RULE>
+                <RULE id="3">
+                    <LEFT>OPERATION</LEFT>
+                    <RIGHT id="1">OPERAND_ADD</RIGHT>
+                    <RIGHT id="2">OPERATIONTALE</RIGHT>
+                </RULE>
+                <RULE id="4">
+                    <LEFT>OPERATIONTALE</LEFT>
+                    <RIGHT id="1">OPAR0</RIGHT>
+                    <RIGHT id="2">OPERAND_ADD</RIGHT>
+                    <RIGHT id="3">OPERATIONTALE</RIGHT>
+                </RULE>
+                <RULE id="5">
+                    <LEFT>OPERATIONTALE</LEFT>
+                    <RIGHT id="1">OPAR1</RIGHT>
+                    <RIGHT id="2">OPERAND_ADD</RIGHT>
+                    <RIGHT id="3">OPERATIONTALE</RIGHT>
+                </RULE>
+                <RULE id="6">
+                    <LEFT>OPERATIONTALE</LEFT>
+                    <RIGHT id="1">eps</RIGHT>
+                </RULE>
+                <RULE id="7">
+                    <LEFT>OPERAND_ADD</LEFT>
+                    <RIGHT id="1">OPERAND_MUL</RIGHT>
+                    <RIGHT id="2">OPERAND_ADDTALE</RIGHT>
+                </RULE>
+                <RULE id="8">
+                    <LEFT>OPERAND_ADDTALE</LEFT>
+                    <RIGHT id="1">OPMUL0</RIGHT>
+                    <RIGHT id="2">OPERAND_MUL_UNS</RIGHT>
+                    <RIGHT id="3">OPERAND_ADDTALE</RIGHT>
+                </RULE>
+                <RULE id="9">
+                    <LEFT>OPERAND_ADDTALE</LEFT>
+                    <RIGHT id="1">OPMUL1</RIGHT>
+                    <RIGHT id="2">OPERAND_MUL_UNS</RIGHT>
+                    <RIGHT id="3">OPERAND_ADDTALE</RIGHT>
+                </RULE>
+                <RULE id="10">
+                    <LEFT>OPERAND_ADDTALE</LEFT>
+                    <RIGHT id="1">eps</RIGHT>
+                </RULE>
+                <RULE id="11">
+                    <LEFT>OPERAND_MUL_UNS</LEFT>
+                    <RIGHT id="1">OPAR0</RIGHT>
+                    <RIGHT id="2">OPERAND_MUL</RIGHT>
+                </RULE>
+                <RULE id="12">
+                    <LEFT>OPERAND_MUL_UNS</LEFT>
+                    <RIGHT id="1">OPAR1</RIGHT>
+                    <RIGHT id="2">OPERAND_MUL</RIGHT>
+                </RULE>
+                <RULE id="13">
+                    <LEFT>OPERAND_MUL_UNS</LEFT>
+                    <RIGHT id="1">OPERAND_MUL</RIGHT>
+                </RULE>
+                <RULE id="14">
+                    <LEFT>OPERAND_MUL</LEFT>
+                    <RIGHT id="1">SPECO</RIGHT>
+                    <RIGHT id="2">SPO0</RIGHT>
+                    <RIGHT id="3">OPERATION</RIGHT>
+                    <RIGHT id="4">SPC0</RIGHT>
+                </RULE>
+                <RULE id="15">
+                    <LEFT>OPERAND_MUL</LEFT>
+                    <RIGHT id="1">SPO0</RIGHT>
+                    <RIGHT id="2">OPERATION</RIGHT>
+                    <RIGHT id="3">SPC0</RIGHT>
+                </RULE>
+                <RULE id="16">
+                    <LEFT>OPERAND_MUL</LEFT>
+                    <RIGHT id="1">OPCOMDEN</RIGHT>
+                    <RIGHT id="2">SPO0</RIGHT>
+                    <RIGHT id="3">OPERATION</RIGHT>
+                    <RIGHT id="4">SCOM0</RIGHT>
+                    <RIGHT id="5">OPERATION</RIGHT>
+                    <RIGHT id="6">SPC0</RIGHT>
+                </RULE>
+                <RULE id="17">
+                    <LEFT>OPERAND_MUL</LEFT>
+                    <RIGHT id="1">CINT</RIGHT>
+                </RULE>
+                <RULE id="18">
+                    <LEFT>OPERAND_MUL</LEFT>
+                    <RIGHT id="1">ID</RIGHT>
+                    <RIGHT id="2">OPERAND_MUL_TALE</RIGHT>
+                </RULE>
+                <RULE id="19">
+                    <LEFT>OPERAND_MUL_TALE</LEFT>
+                    <RIGHT id="1">SBKO0</RIGHT>
+                    <RIGHT id="2">ARRNUMS</RIGHT>
+                    <RIGHT id="3">SBKC0</RIGHT>
+                    <RIGHT id="4">OPERAND_MUL_VTALE</RIGHT>
+                </RULE>
+                <RULE id="20">
+                    <LEFT>OPERAND_MUL_TALE</LEFT>
+                    <RIGHT id="1">OPERAND_MUL_VTALE</RIGHT>
+                </RULE>
+                <RULE id="21">
+                    <LEFT>ARRNUMS</LEFT>
+                    <RIGHT id="1">ARRNUM</RIGHT>
+                    <RIGHT id="2">ARRNUMTALE</RIGHT>
+                </RULE>
+                <RULE id="22">
+                    <LEFT>ARRNUMTALE</LEFT>
+                    <RIGHT id="1">SCOM0</RIGHT>
+                    <RIGHT id="2">ARRNUMS</RIGHT>
+                </RULE>
+                <RULE id="23">
+                    <LEFT>ARRNUMTALE</LEFT>
+                    <RIGHT id="1">eps</RIGHT>
+                </RULE>
+                <RULE id="24">
+                    <LEFT>ARRNUM</LEFT>
+                    <RIGHT id="1">OPERATION</RIGHT>
+                </RULE>
+                <RULE id="25">
+                    <LEFT>OPERAND_MUL_VTALE</LEFT>
+                    <RIGHT id="1">SP0</RIGHT>
+                    <RIGHT id="2">OPERAND_MUL_VTALESP0</RIGHT>
+                </RULE>
+                <RULE id="26">
+                    <LEFT>OPERAND_MUL_VTALE</LEFT>
+                    <RIGHT id="1">eps</RIGHT>
+                </RULE>
+                <RULE id="27">
+                    <LEFT>OPERAND_MUL_VTALESP0</LEFT>
+                    <RIGHT id="1">KNUM</RIGHT>
+                </RULE>
+                <RULE id="28">
+                    <LEFT>OPERAND_MUL_VTALESP0</LEFT>
+                    <RIGHT id="1">KDEN</RIGHT>
+                </RULE>
+                <RULE id="29">
+                    <LEFT>SPECO</LEFT>
+                    <RIGHT id="1">KINT</RIGHT>
+                </RULE>
+                <RULE id="30">
+                    <LEFT>SPECO</LEFT>
+                    <RIGHT id="1">KFRC</RIGHT>
+                </RULE>
+                <RULE id="31">
+                    <LEFT>SPECO</LEFT>
+                    <RIGHT id="1">KSIM</RIGHT>
+                </RULE>
+                <RULE id="32">
+                    <LEFT>OPCOMDEN</LEFT>
+                    <RIGHT id="1">KCD</RIGHT>
+                </RULE>
+            </RULES>
+            <START>OPERATION</START>
+        </GRAMMAR>
+        <GRAMMAR name="GRAMMAR_LOG">
+            <NON_TERMINALS>
+                <NON_TERMINAL>LE</NON_TERMINAL>
+                <NON_TERMINAL>DISO</NON_TERMINAL>
+                <NON_TERMINAL>DISOTALE</NON_TERMINAL>
+                <NON_TERMINAL>CONJO</NON_TERMINAL>
+                <NON_TERMINAL>CONJOTALE</NON_TERMINAL>
+                <NON_TERMINAL>NEGO</NON_TERMINAL>
+                <NON_TERMINAL>RATOP</NON_TERMINAL>
+                <NON_TERMINAL>RATIOTALE</NON_TERMINAL>
+                <NON_TERMINAL>RATIOTALETALE</NON_TERMINAL>
+            </NON_TERMINALS>
+            <TERMINALS>
+                <TERMINAL>KOR</TERMINAL>
+                <TERMINAL>KAND</TERMINAL>
+                <TERMINAL>KNOT</TERMINAL>
+                <TERMINAL>GRAMMAR_OPERATION</TERMINAL>
+                <TERMINAL>OPCP1</TERMINAL>
+                <TERMINAL>OPCP2</TERMINAL>
+                <TERMINAL>OPCP3</TERMINAL>
+                <TERMINAL>OPCP4</TERMINAL>
+                <TERMINAL>OPCP5</TERMINAL>
+                <TERMINAL>OPINIT0</TERMINAL>
+            </TERMINALS>
+            <RULES>
+                <RULE id="1">
+                    <LEFT>LE</LEFT>
+                    <RIGHT id="1">DISO</RIGHT>
+                    <RIGHT id="2">DISOTALE</RIGHT>
+                </RULE>
+                <RULE id="2">
+                    <LEFT>DISOTALE</LEFT>
+                    <RIGHT id="1">KOR</RIGHT>
+                    <RIGHT id="2">DISO</RIGHT>
+                </RULE>
+                <RULE id="3">
+                    <LEFT>DISOTALE</LEFT>
+                    <RIGHT id="1">eps</RIGHT>
+                </RULE>
+                <RULE id="4">
+                    <LEFT>DISO</LEFT>
+                    <RIGHT id="1">CONJO</RIGHT>
+                    <RIGHT id="2">CONJOTALE</RIGHT>
+                </RULE>
+                <RULE id="5">
+                    <LEFT>CONJOTALE</LEFT>
+                    <RIGHT id="1">KAND</RIGHT>
+                    <RIGHT id="2">CONJO</RIGHT>
+                </RULE>
+                <RULE id="6">
+                    <LEFT>CONJOTALE</LEFT>
+                    <RIGHT id="1">eps</RIGHT>
+                </RULE>
+                <RULE id="7">
+                    <LEFT>CONJO</LEFT>
+                    <RIGHT id="1">KNOT</RIGHT>
+                    <RIGHT id="2">NEGO</RIGHT>
+                </RULE>
+                <RULE id="8">
+                    <LEFT>CONJO</LEFT>
+                    <RIGHT id="1">NEGO</RIGHT>
+                </RULE>
+                <RULE id="9">
+                    <LEFT>NEGO</LEFT>
+                    <RIGHT id="1">GRAMMAR_OPERATION</RIGHT>
+                    <RIGHT id="2">RATIOTALE</RIGHT>
+                </RULE>
+                <RULE id="10">
+                    <LEFT>RATIOTALE</LEFT>
+                    <RIGHT id="1">RATOP</RIGHT>
+                    <RIGHT id="2">GRAMMAR_OPERATION</RIGHT>
+                    <RIGHT id="3">RATIOTALETALE</RIGHT>
+                </RULE>
+                <RULE id="11">
+                    <LEFT>RATIOTALE</LEFT>
+                    <RIGHT id="1">eps</RIGHT>
+                </RULE>
+                <RULE id="12">
+                    <LEFT>RATIOTALETALE</LEFT>
+                    <RIGHT id="1">DISOTALE</RIGHT>
+                </RULE>
+                <RULE id="13">
+                    <LEFT>RATIOTALETALE</LEFT>
+                    <RIGHT id="1">CONJOTALE</RIGHT>
+                </RULE>
+                <RULE id="14">
+                    <LEFT>RATOP</LEFT>
+                    <RIGHT id="1">OPCP1</RIGHT>
+                </RULE>
+                <RULE id="15">
+                    <LEFT>RATOP</LEFT>
+                    <RIGHT id="1">OPCP2</RIGHT>
+                </RULE>
+                <RULE id="16">
+                    <LEFT>RATOP</LEFT>
+                    <RIGHT id="1">OPCP3</RIGHT>
+                </RULE>
+                <RULE id="17">
+                    <LEFT>RATOP</LEFT>
+                    <RIGHT id="1">OPCP4</RIGHT>
+                </RULE>
+                <RULE id="18">
+                    <LEFT>RATOP</LEFT>
+                    <RIGHT id="1">OPCP5</RIGHT>
+                </RULE>
+                <RULE id="19">
+                    <LEFT>RATOP</LEFT>
+                    <RIGHT id="1">OPINIT0</RIGHT>
+                </RULE>
+            </RULES>
+            <START>LE</START>
+        </GRAMMAR>
+        <GRAMMAR name="GRAMMAR_OPERATOR_SET">
+            <NON_TERMINALS>
+                <NON_TERMINAL>OSET</NON_TERMINAL>
+                <NON_TERMINAL>OSETTALE</NON_TERMINAL>
+                <NON_TERMINAL>O</NON_TERMINAL>
+                <NON_TERMINAL>OTALE</NON_TERMINAL>
+                <NON_TERMINAL>UNLO</NON_TERMINAL>
+                <NON_TERMINAL>UNOTCONDO</NON_TERMINAL>
+                <NON_TERMINAL>AO</NON_TERMINAL>
+                <NON_TERMINAL>FO</NON_TERMINAL>
+                <NON_TERMINAL>GO</NON_TERMINAL>
+                <NON_TERMINAL>INO</NON_TERMINAL>
+                <NON_TERMINAL>OUTO</NON_TERMINAL>
+                <NON_TERMINAL>COMO</NON_TERMINAL>
+                <NON_TERMINAL>UCONDO</NON_TERMINAL>
+                <NON_TERMINAL>MATCHED</NON_TERMINAL>
+                <NON_TERMINAL>MATCHEDTALE</NON_TERMINAL>
+                <NON_TERMINAL>MATCHEDTALETALE</NON_TERMINAL>
+                <NON_TERMINAL>OPTIONAL</NON_TERMINAL>
+                <NON_TERMINAL>TALE</NON_TERMINAL>
+                <NON_TERMINAL>TALETALE</NON_TERMINAL>
+                <NON_TERMINAL>TALETALETALE</NON_TERMINAL>
+                <NON_TERMINAL>NINO</NON_TERMINAL>
+                <NON_TERMINAL>INM</NON_TERMINAL>
+                <NON_TERMINAL>NOUTO</NON_TERMINAL>
+                <NON_TERMINAL>INMTALE</NON_TERMINAL>
+                <NON_TERMINAL>ARRNUMTALE</NON_TERMINAL>
+                <NON_TERMINAL>AOTALE</NON_TERMINAL>
+                <NON_TERMINAL>AOTALETALE</NON_TERMINAL>
+                <NON_TERMINAL>AOTALETALETALE</NON_TERMINAL>
+            </NON_TERMINALS>
+            <TERMINALS>
+                <TERMINAL>SSCOL0</TERMINAL>
+                <TERMINAL>SCOL0</TERMINAL>
+                <TERMINAL>KIF</TERMINAL>
+                <TERMINAL>GRAMMAR_LOG</TERMINAL>
+                <TERMINAL>KTH</TERMINAL>
+                <TERMINAL>KEL</TERMINAL>
+                <TERMINAL>OPA0</TERMINAL>
+                <TERMINAL>GRAMMAR_OPERATION</TERMINAL>
+                <TERMINAL>KBG</TERMINAL>
+                <TERMINAL>KEN</TERMINAL>
+                <TERMINAL>SPO0</TERMINAL>
+                <TERMINAL>SPC0</TERMINAL>
+                <TERMINAL>KRD</TERMINAL>
+                <TERMINAL>KRDL</TERMINAL>
+                <TERMINAL>KWT</TERMINAL>
+                <TERMINAL>KWTL</TERMINAL>
+                <TERMINAL>KGO</TERMINAL>
+                <TERMINAL>KFR</TERMINAL>
+                <TERMINAL>KTO</TERMINAL>
+                <TERMINAL>KDO</TERMINAL>
+                <TERMINAL>ID</TERMINAL>
+                <TERMINAL>SBKO0</TERMINAL>
+                <TERMINAL>SBKC0</TERMINAL>
+                <TERMINAL>SCOM0</TERMINAL>
+                <TERMINAL>SP0</TERMINAL>
+                <TERMINAL>KNUM</TERMINAL>
+                <TERMINAL>KDEN</TERMINAL>
+            </TERMINALS>
+            <RULES>
+                <RULE id="1">
+                    <LEFT>OSET</LEFT>
+                    <RIGHT id="1">O</RIGHT>
+                    <RIGHT id="2">SSCOL0</RIGHT>
+                    <RIGHT id="3">OSETTALE</RIGHT>
+                </RULE>
+                <RULE id="2">
+                    <LEFT>OSETTALE</LEFT>
+                    <RIGHT id="1">OSET</RIGHT>
+                </RULE>
+                <RULE id="3">
+                    <LEFT>OSETTALE</LEFT>
+                    <RIGHT id="1">eps</RIGHT>
+                </RULE>
+                <RULE id="4">
+                    <LEFT>O</LEFT>
+                    <RIGHT id="1">ID</RIGHT>
+                    <RIGHT id="2">OTALE</RIGHT>
+                </RULE>
+                <RULE id="5">
+                    <LEFT>OTALE</LEFT>
+                    <RIGHT id="1">SCOL0</RIGHT>
+                    <RIGHT id="2">UNLO</RIGHT>
+                </RULE>
+                <RULE id="6">
+                    <LEFT>OTALE</LEFT>
+                    <RIGHT id="1">AOTALE</RIGHT>
+                </RULE>
+                <RULE id="7">
+                    <LEFT>O</LEFT>
+                    <RIGHT id="1">UNLO</RIGHT>
+                </RULE>
+                <RULE id="8">
+                    <LEFT>UNLO</LEFT>
+                    <RIGHT id="1">UCONDO</RIGHT>
+                </RULE>
+                <RULE id="9">
+                    <LEFT>UNLO</LEFT>
+                    <RIGHT id="1">UNOTCONDO</RIGHT>
+                </RULE>
+                <RULE id="10">
+                    <LEFT>UNOTCONDO</LEFT>
+                    <RIGHT id="1">FO</RIGHT>
+                </RULE>
+                <RULE id="11">
+                    <LEFT>UNOTCONDO</LEFT>
+                    <RIGHT id="1">GO</RIGHT>
+                </RULE>
+                <RULE id="12">
+                    <LEFT>UNOTCONDO</LEFT>
+                    <RIGHT id="1">INO</RIGHT>
+                </RULE>
+                <RULE id="13">
+                    <LEFT>UNOTCONDO</LEFT>
+                    <RIGHT id="1">OUTO</RIGHT>
+                </RULE>
+                <RULE id="14">
+                    <LEFT>UNOTCONDO</LEFT>
+                    <RIGHT id="1">COMO</RIGHT>
+                </RULE>
+                <RULE id="15">
+                    <LEFT>UCONDO</LEFT>
+                    <RIGHT id="1">KIF</RIGHT>
+                    <RIGHT id="2">GRAMMAR_LOG</RIGHT>
+                    <RIGHT id="3">KTH</RIGHT>
+                    <RIGHT id="4">MATCHED</RIGHT>
+                    <RIGHT id="5">OPTIONAL</RIGHT>
+                </RULE>
+                <RULE id="16">
+                    <LEFT>MATCHED</LEFT>
+                    <RIGHT id="1">KIF</RIGHT>
+                    <RIGHT id="2">GRAMMAR_LOG</RIGHT>
+                    <RIGHT id="3">KTH</RIGHT>
+                    <RIGHT id="4">MATCHED</RIGHT>
+                    <RIGHT id="5">KEL</RIGHT>
+                    <RIGHT id="6">MATCHED</RIGHT>
+                </RULE>
+                <RULE id="17">
+                    <LEFT>MATCHED</LEFT>
+                    <RIGHT id="1">UNOTCONDO</RIGHT>
+                </RULE>
+                <RULE id="18">
+                    <LEFT>MATCHED</LEFT>
+                    <RIGHT id="1">ID</RIGHT>
+                    <RIGHT id="2">MATCHEDTALE</RIGHT>
+                </RULE>
+                <RULE id="19">
+                    <LEFT>MATCHEDTALE</LEFT>
+                    <RIGHT id="1">SCOL0</RIGHT>
+                    <RIGHT id="2">MATCHEDTALETALE</RIGHT>
+                </RULE>
+                <RULE id="20">
+                    <LEFT>MATCHEDTALE</LEFT>
+                    <RIGHT id="1">AOTALE</RIGHT>
+                </RULE>
+                <RULE id="21">
+                    <LEFT>MATCHEDTALETALE</LEFT>
+                    <RIGHT id="1">UNOTCONDO</RIGHT>
+                </RULE>
+                <RULE id="22">
+                    <LEFT>MATCHEDTALETALE</LEFT>
+                    <RIGHT id="1">AO</RIGHT>
+                </RULE>
+                <RULE id="23">
+                    <LEFT>OPTIONAL</LEFT>
+                    <RIGHT id="1">KEL</RIGHT>
+                    <RIGHT id="1">TALE</RIGHT>
+                </RULE>
+                <RULE id="24">
+                    <LEFT>OPTIONAL</LEFT>
+                    <RIGHT id="1">eps</RIGHT>
+                </RULE>
+                <RULE id="25">
+                    <LEFT>TALE</LEFT>
+                    <RIGHT id="1">KIF</RIGHT>
+                    <RIGHT id="2">GRAMMAR_LOG</RIGHT>
+                    <RIGHT id="3">KTH</RIGHT>
+                    <RIGHT id="4">TALE</RIGHT>
+                </RULE>
+                <RULE id="26">
+                    <LEFT>TALE</LEFT>
+                    <RIGHT id="1">ID</RIGHT>
+                    <RIGHT id="2">TALETALE</RIGHT>
+                </RULE>
+                <RULE id="27">
+                    <LEFT>TALE</LEFT>
+                    <RIGHT id="1">UNOTCONDO</RIGHT>
+                </RULE>
+                <RULE id="28">
+                    <LEFT>TALETALE</LEFT>
+                    <RIGHT id="1">SCOL0</RIGHT>
+                    <RIGHT id="2">TALETALETALE</RIGHT>
+                </RULE>
+                <RULE id="29">
+                    <LEFT>TALETALE</LEFT>
+                    <RIGHT id="1">AOTALE</RIGHT>
+                </RULE>
+                <RULE id="30">
+                    <LEFT>TALETALETALE</LEFT>
+                    <RIGHT id="1">UNOTCONDO</RIGHT>
+                </RULE>
+                <RULE id="31">
+                    <LEFT>TALETALETALE</LEFT>
+                    <RIGHT id="1">AO</RIGHT>
+                </RULE>
+                <RULE id="32">
+                    <LEFT>AO</LEFT>
+                    <RIGHT id="1">ID</RIGHT>
+                    <RIGHT id="2">AOTALE</RIGHT>
+                </RULE>
+                <RULE id="33">
+                    <LEFT>AOTALE</LEFT>
+                    <RIGHT id="1">OPA0</RIGHT>
+                    <RIGHT id="2">GRAMMAR_OPERATION</RIGHT>
+                </RULE>
+                <RULE id="34">
+                    <LEFT>AOTALE</LEFT>
+                    <RIGHT id="1">SBKO0</RIGHT>
+                    <RIGHT id="2">GRAMMAR_OPERATION</RIGHT>
+                    <RIGHT id="3">ARRNUMTALE</RIGHT>
+                    <RIGHT id="4">SBKC0</RIGHT>
+                    <RIGHT id="5">OPA0</RIGHT>
+                    <RIGHT id="6">GRAMMAR_OPERATION</RIGHT>
+                </RULE>
+                <RULE id="35">
+                    <LEFT>AOTALE</LEFT>
+                    <RIGHT id="1">SP0</RIGHT>
+                    <RIGHT id="2">AOTALETALE</RIGHT>
+                </RULE>
+                <RULE id="36">
+                    <LEFT>AOTALETALE</LEFT>
+                    <RIGHT id="1">KNUM</RIGHT>
+                    <RIGHT id="2">AOTALETALETALE</RIGHT>
+                </RULE>
+                <RULE id="37">
+                    <LEFT>AOTALETALE</LEFT>
+                    <RIGHT id="1">KDEN</RIGHT>
+                    <RIGHT id="2">AOTALETALETALE</RIGHT>
+                </RULE>
+                <RULE id="38">
+                    <LEFT>AOTALETALETALE</LEFT>
+                    <RIGHT id="1">OPA0</RIGHT>
+                    <RIGHT id="2">GRAMMAR_OPERATION</RIGHT>
+                </RULE>
+                <RULE id="39">
+                    <LEFT>AOTALETALETALE</LEFT>
+                    <RIGHT id="1">SBKO0</RIGHT>
+                    <RIGHT id="2">GRAMMAR_OPERATION</RIGHT>
+                    <RIGHT id="3">ARRNUMTALE</RIGHT>
+                    <RIGHT id="4">SBKC0</RIGHT>
+                    <RIGHT id="5">OPA0</RIGHT>
+                    <RIGHT id="6">GRAMMAR_OPERATION</RIGHT>
+                </RULE>
+                <RULE id="40">
+                    <LEFT>ARRNUMTALE</LEFT>
+                    <RIGHT id="1">SCOM0</RIGHT>
+                    <RIGHT id="2">GRAMMAR_OPERATION</RIGHT>
+                    <RIGHT id="3">ARRNUMTALE</RIGHT>
+                </RULE>
+                <RULE id="41">
+                    <LEFT>ARRNUMTALE</LEFT>
+                    <RIGHT id="1">eps</RIGHT>
+                </RULE>
+                <RULE id="42">
+                    <LEFT>COMO</LEFT>
+                    <RIGHT id="1">KBG</RIGHT>
+                    <RIGHT id="1">OSET</RIGHT>
+                    <RIGHT id="1">KEN</RIGHT>
+                </RULE>
+                <RULE id="43">
+                    <LEFT>INO</LEFT>
+                    <RIGHT id="1">NINO</RIGHT>
+                    <RIGHT id="2">SPO0</RIGHT>
+                    <RIGHT id="3">INM</RIGHT>
+                    <RIGHT id="4">SPC0</RIGHT>
+                </RULE>
+                <RULE id="44">
+                    <LEFT>NINO</LEFT>
+                    <RIGHT id="1">KRD</RIGHT>
+                </RULE>
+                <RULE id="45">
+                    <LEFT>NINO</LEFT>
+                    <RIGHT id="1">KRDL</RIGHT>
+                </RULE>
+                <RULE id="46">
+                    <LEFT>INM</LEFT>
+                    <RIGHT id="1">ID</RIGHT>
+                    <RIGHT id="1">INMTALE</RIGHT>
+                </RULE>
+                <RULE id="47">
+                    <LEFT>INMTALE</LEFT>
+                    <RIGHT id="1">SBKO0</RIGHT>
+                    <RIGHT id="2">GRAMMAR_OPERATION</RIGHT>
+                    <RIGHT id="3">ARRNUMTALE</RIGHT>
+                    <RIGHT id="4">SBKC0</RIGHT>
+                </RULE>
+                <RULE id="48">
+                    <LEFT>INMTALE</LEFT>
+                    <RIGHT id="1">eps</RIGHT>
+                </RULE>
+                <RULE id="49">
+                    <LEFT>OUTO</LEFT>
+                    <RIGHT id="1">NOUTO</RIGHT>
+                    <RIGHT id="2">SPO0</RIGHT>
+                    <RIGHT id="3">GRAMMAR_OPERATION</RIGHT>
+                    <RIGHT id="4">SPC0</RIGHT>
+                </RULE>
+                <RULE id="50">
+                    <LEFT>NOUTO</LEFT>
+                    <RIGHT id="1">KWT</RIGHT>
+                </RULE>
+                <RULE id="51">
+                    <LEFT>NOUTO</LEFT>
+                    <RIGHT id="1">KWTL</RIGHT>
+                </RULE>
+                <RULE id="52">
+                    <LEFT>GO</LEFT>
+                    <RIGHT id="1">KGO</RIGHT>
+                    <RIGHT id="2">ID</RIGHT>
+                </RULE>
+                <RULE id="53">
+                    <LEFT>FO</LEFT>
+                    <RIGHT id="1">KFR</RIGHT>
+                    <RIGHT id="2">ID</RIGHT>
+                    <RIGHT id="3">OPA0</RIGHT>
+                    <RIGHT id="4">GRAMMAR_OPERATION</RIGHT>
+                    <RIGHT id="5">KTO</RIGHT>
+                    <RIGHT id="6">GRAMMAR_OPERATION</RIGHT>
+                    <RIGHT id="7">KDO</RIGHT>
+                    <RIGHT id="8">O</RIGHT>
+                </RULE>
+            </RULES>
+            <START>OSET</START>
+        </GRAMMAR>
+        <GRAMMAR name="GRAMMAR_TYPES">
+            <NON_TERMINALS>
+                <NON_TERMINAL>T</NON_TERMINAL>
+                <NON_TERMINAL>ST</NON_TERMINAL>
+                <NON_TERMINAL>UT</NON_TERMINAL>
+                <NON_TERMINAL>ARR</NON_TERMINAL>
+                <NON_TERMINAL>IDIAPS</NON_TERMINAL>
+                <NON_TERMINAL>IDIAP</NON_TERMINAL>
+                <NON_TERMINAL>IDIAPSTALE</NON_TERMINAL>
+                <NON_TERMINAL>TDIAP</NON_TERMINAL>
+                <NON_TERMINAL>ENUM</NON_TERMINAL>
+                <NON_TERMINAL>IDSET</NON_TERMINAL>
+                <NON_TERMINAL>IDSETTALE</NON_TERMINAL>
+                <NON_TERMINAL>TDIAPTALE</NON_TERMINAL>
+                <NON_TERMINAL>TDIAPTALETALE</NON_TERMINAL>
+                <NON_TERMINAL>TDIAPTALETALETALE</NON_TERMINAL>
+            </NON_TERMINALS>
+            <TERMINALS>
+                <TERMINAL>ID</TERMINAL>
+                <TERMINAL>KTINT0</TERMINAL>
+                <TERMINAL>KTRAT1</TERMINAL>
+                <TERMINAL>KARR</TERMINAL>
+                <TERMINAL>SBKO0</TERMINAL>
+                <TERMINAL>SBKC0</TERMINAL>
+                <TERMINAL>KOF</TERMINAL>
+                <TERMINAL>SCOM0</TERMINAL>
+                <TERMINAL>CINT</TERMINAL>
+                <TERMINAL>SPO0</TERMINAL>
+                <TERMINAL>SPC0</TERMINAL>
+                <TERMINAL>OPDPS0</TERMINAL>
+                <TERMINAL>OPAR0</TERMINAL>
+                <TERMINAL>OPAR1</TERMINAL>
+            </TERMINALS>
+            <RULES>
+                <RULE id="1">
+                    <LEFT>T</LEFT>
+                    <RIGHT id="1">ST</RIGHT>
+                </RULE>
+                <RULE id="2">
+                    <LEFT>T</LEFT>
+                    <RIGHT id="1">UT</RIGHT>
+                </RULE>
+                <RULE id="3">
+                    <LEFT>UT</LEFT>
+                    <RIGHT id="1">ID</RIGHT>
+                </RULE>
+                <RULE id="4">
+                    <LEFT>ST</LEFT>
+                    <RIGHT id="1">KTINT0</RIGHT>
+                </RULE>
+                <RULE id="5">
+                    <LEFT>ST</LEFT>
+                    <RIGHT id="1">KTRAT1</RIGHT>
+                </RULE>
+                <RULE id="6">
+                    <LEFT>ST</LEFT>
+                    <RIGHT id="1">ARR</RIGHT>
+                </RULE>
+                <RULE id="7">
+                    <LEFT>ST</LEFT>
+                    <RIGHT id="1">TDIAP</RIGHT>
+                </RULE>
+                <RULE id="8">
+                    <LEFT>ST</LEFT>
+                    <RIGHT id="1">ENUM</RIGHT>
+                </RULE>
+                <RULE id="9">
+                    <LEFT>ARR</LEFT>
+                    <RIGHT id="1">KARR</RIGHT>
+                    <RIGHT id="2">SBKO0</RIGHT>
+                    <RIGHT id="3">IDIAPS</RIGHT>
+                    <RIGHT id="4">SBKC0</RIGHT>
+                    <RIGHT id="5">KOF</RIGHT>
+                    <RIGHT id="6">T</RIGHT>
+                </RULE>
+                <RULE id="10">
+                    <LEFT>IDIAPS</LEFT>
+                    <RIGHT id="1">IDIAP</RIGHT>
+                    <RIGHT id="2">IDIAPSTALE</RIGHT>
+                </RULE>
+                <RULE id="11">
+                    <LEFT>IDIAPSTALE</LEFT>
+                    <RIGHT id="1">SCOM0</RIGHT>
+                    <RIGHT id="2">IDIAPS</RIGHT>
+                </RULE>
+                <RULE id="12">
+                    <LEFT>IDIAPSTALE</LEFT>
+                    <RIGHT id="1">eps</RIGHT>
+                </RULE>
+                <RULE id="13">
+                    <LEFT>IDIAP</LEFT>
+                    <RIGHT id="1">CINT</RIGHT>
+                    <RIGHT id="2">OPDPS0</RIGHT>
+                    <RIGHT id="3">CINT</RIGHT>
+                </RULE>
+                <RULE id="14">
+                    <LEFT>TDIAP</LEFT>
+                    <RIGHT id="1">OPAR0</RIGHT>
+                    <RIGHT id="2">TDIAPTALE</RIGHT>
+                </RULE>
+                <RULE id="15">
+                    <LEFT>TDIAP</LEFT>
+                    <RIGHT id="1">OPAR1</RIGHT>
+                    <RIGHT id="2">TDIAPTALE</RIGHT>
+                </RULE>
+                <RULE id="16">
+                    <LEFT>TDIAP</LEFT>
+                    <RIGHT id="1">TDIAPTALE</RIGHT>
+                </RULE>
+                <RULE id="17">
+                    <LEFT>TDIAPTALE</LEFT>
+                    <RIGHT id="1">CINT</RIGHT>
+                    <RIGHT id="2">OPDPS0</RIGHT>
+                    <RIGHT id="3">TDIAPTALETALE</RIGHT>
+                </RULE>
+                <RULE id="18">
+                    <LEFT>TDIAPTALE</LEFT>
+                    <RIGHT id="1">ID</RIGHT>
+                    <RIGHT id="2">OPDPS0</RIGHT>
+                    <RIGHT id="3">TDIAPTALETALE</RIGHT>
+                </RULE>
+                <RULE id="19">
+                    <LEFT>TDIAPTALETALE</LEFT>
+                    <RIGHT id="1">OPAR0</RIGHT>
+                    <RIGHT id="2">TDIAPTALETALETALE</RIGHT>
+                </RULE>
+                <RULE id="20">
+                    <LEFT>TDIAPTALETALE</LEFT>
+                    <RIGHT id="1">OPAR1</RIGHT>
+                    <RIGHT id="2">TDIAPTALETALETALE</RIGHT>
+                </RULE>
+                <RULE id="21">
+                    <LEFT>TDIAPTALETALE</LEFT>
+                    <RIGHT id="1">TDIAPTALETALETALE</RIGHT>
+                </RULE>
+                <RULE id="22">
+                    <LEFT>TDIAPTALETALETALE</LEFT>
+                    <RIGHT id="1">CINT</RIGHT>
+                </RULE>
+                <RULE id="23">
+                    <LEFT>TDIAPTALETALETALE</LEFT>
+                    <RIGHT id="1">ID</RIGHT>
+                </RULE>
+                <RULE id="24">
+                    <LEFT>ENUM</LEFT>
+                    <RIGHT id="1">SPO0</RIGHT>
+                    <RIGHT id="2">IDSET</RIGHT>
+                    <RIGHT id="3">SPC0</RIGHT>
+                </RULE>
+                <RULE id="25">
+                    <LEFT>IDSET</LEFT>
+                    <RIGHT id="1">ID</RIGHT>
+                    <RIGHT id="2">IDSETTALE</RIGHT>
+                </RULE>
+                <RULE id="26">
+                    <LEFT>IDSETTALE</LEFT>
+                    <RIGHT id="1">SCOM0</RIGHT>
+                    <RIGHT id="2">IDSET</RIGHT>
+                </RULE>
+                <RULE id="27">
+                    <LEFT>IDSETTALE</LEFT>
+                    <RIGHT id="1">eps</RIGHT>
+                </RULE>
+            </RULES>
+            <START>T</START>
+        </GRAMMAR>
+        <GRAMMAR name="GRAMMAR_VAR_DESCRIPTION">
+            <NON_TERMINALS>
+                <NON_TERMINAL>DV</NON_TERMINAL>
+                <NON_TERMINAL>VSET</NON_TERMINAL>
+                <NON_TERMINAL>VSETTALE</NON_TERMINAL>
+            </NON_TERMINALS>
+            <TERMINALS>
+                <TERMINAL>SCOL0</TERMINAL>
+                <TERMINAL>GRAMMAR_TYPES</TERMINAL>
+                <TERMINAL>SSCOL0</TERMINAL>
+                <TERMINAL>SCOM0</TERMINAL>
+                <TERMINAL>ID</TERMINAL>
+            </TERMINALS>
+            <RULES>
+                <RULE id="1">
+                    <LEFT>DV</LEFT>
+                    <RIGHT id="1">VSET</RIGHT>
+                    <RIGHT id="2">SCOL0</RIGHT>
+                    <RIGHT id="3">GRAMMAR_TYPES</RIGHT>
+                    <RIGHT id="4">SSCOL0</RIGHT>
+                    <RIGHT id="5">DV</RIGHT>
+                </RULE>
+                <RULE id="2">
+                    <LEFT>VSET</LEFT>
+                    <RIGHT id="1">ID</RIGHT>
+                    <RIGHT id="2">VSETTALE</RIGHT>
+                </RULE>
+                <RULE id="3">
+                    <LEFT>VSETTALE</LEFT>
+                    <RIGHT id="1">SCOM0</RIGHT>
+                    <RIGHT id="2">VSET</RIGHT>
+                </RULE>
+                <RULE id="4">
+                    <LEFT>VSETTALE</LEFT>
+                    <RIGHT id="1">eps</RIGHT>
+                </RULE>
+                <RULE id="5">
+                    <LEFT>DV</LEFT>
+                    <RIGHT id="1">eps</RIGHT>
+                </RULE>
+            </RULES>
+            <START>DV</START>
+        </GRAMMAR>
+        <GRAMMAR name="GRAMMAR_LAB_DESCRIPTION">
+            <NON_TERMINALS>
+                <NON_TERMINAL>DL</NON_TERMINAL>
+                <NON_TERMINAL>LSET</NON_TERMINAL>
+                <NON_TERMINAL>LSETTALE</NON_TERMINAL>
+            </NON_TERMINALS>
+            <TERMINALS>
+                <TERMINAL>SSCOL0</TERMINAL>
+                <TERMINAL>ID</TERMINAL>
+                <TERMINAL>SCOM0</TERMINAL>
+            </TERMINALS>
+            <RULES>
+                <RULE id="1">
+                    <LEFT>DL</LEFT>
+                    <RIGHT id="1">LSET</RIGHT>
+                    <RIGHT id="2">SSCOL0</RIGHT>
+                </RULE>
+                <RULE id="2">
+                    <LEFT>LSET</LEFT>
+                    <RIGHT id="1">ID</RIGHT>
+                    <RIGHT id="2">LSETTALE</RIGHT>
+                </RULE>
+                <RULE id="3">
+                    <LEFT>LSETTALE</LEFT>
+                    <RIGHT id="1">SCOM0</RIGHT>
+                    <RIGHT id="2">LSET</RIGHT>
+                </RULE>
+                <RULE id="4">
+                    <LEFT>LSETTALE</LEFT>
+                    <RIGHT id="1">eps</RIGHT>
+                </RULE>
+            </RULES>
+            <START>DL</START>
+        </GRAMMAR>
+        <GRAMMAR name="GRAMMAR_CONST_DESCRIPTION">
+            <NON_TERMINALS>
+                <NON_TERMINAL>DC</NON_TERMINAL>
+                <NON_TERMINAL>IC</NON_TERMINAL>
+                <NON_TERMINAL>ICTALE</NON_TERMINAL>
+            </NON_TERMINALS>
+            <TERMINALS>
+                <TERMINAL>OPINIT0</TERMINAL>
+                <TERMINAL>SSCOL0</TERMINAL>
+                <TERMINAL>CINT</TERMINAL>
+                <TERMINAL>OPAR0</TERMINAL>
+                <TERMINAL>OPAR1</TERMINAL>
+                <TERMINAL>ID</TERMINAL>
+            </TERMINALS>
+            <RULES>
+                <RULE id="1">
+                    <LEFT>DC</LEFT>
+                    <RIGHT id="1">ID</RIGHT>
+                    <RIGHT id="2">OPINIT0</RIGHT>
+                    <RIGHT id="3">IC</RIGHT>
+                    <RIGHT id="4">SSCOL0</RIGHT>
+                    <RIGHT id="5">DC</RIGHT>
+                </RULE>
+                <RULE id="2">
+                    <LEFT>IC</LEFT>
+                    <RIGHT id="1">OPAR0</RIGHT>
+                    <RIGHT id="2">ICTALE</RIGHT>
+                </RULE>
+                <RULE id="3">
+                    <LEFT>IC</LEFT>
+                    <RIGHT id="1">OPAR1</RIGHT>
+                    <RIGHT id="2">ICTALE</RIGHT>
+                </RULE>
+                <RULE id="4">
+                    <LEFT>IC</LEFT>
+                    <RIGHT id="1">ICTALE</RIGHT>
+                </RULE>
+                <RULE id="5">
+                    <LEFT>ICTALE</LEFT>
+                    <RIGHT id="1">CINT</RIGHT>
+                </RULE>
+                <RULE id="6">
+                    <LEFT>ICTALE</LEFT>
+                    <RIGHT id="1">ID</RIGHT>
+                </RULE>
+                <RULE id="7">
+                    <LEFT>DC</LEFT>
+                    <RIGHT id="1">eps</RIGHT>
+                </RULE>
+            </RULES>
+            <START>DC</START>
+        </GRAMMAR>
+        <GRAMMAR name="GRAMMAR_TYPE_DESCRIPTION">
+            <NON_TERMINALS>
+                <NON_TERMINAL>DT</NON_TERMINAL>
+            </NON_TERMINALS>
+            <TERMINALS>
+                <TERMINAL>ID</TERMINAL>
+                <TERMINAL>OPINIT0</TERMINAL>
+                <TERMINAL>GRAMMAR_TYPES</TERMINAL>
+                <TERMINAL>SSCOL0</TERMINAL>
+            </TERMINALS>
+            <RULES>
+                <RULE id="1">
+                    <LEFT>DT</LEFT>
+                    <RIGHT id="1">ID</RIGHT>
+                    <RIGHT id="2">OPINIT0</RIGHT>
+                    <RIGHT id="3">GRAMMAR_TYPES</RIGHT>
+                    <RIGHT id="4">SSCOL0</RIGHT>
+                    <RIGHT id="5">DT</RIGHT>
+                </RULE>
+                <RULE id="2">
+                    <LEFT>DT</LEFT>
+                    <RIGHT id="1">eps</RIGHT>
+                </RULE>
+            </RULES>
+            <START>DT</START>
+        </GRAMMAR>
+        <GRAMMAR name="GRAMMAR_MAIN">
+            <NON_TERMINALS>
+                <NON_TERMINAL>S</NON_TERMINAL>
+                <NON_TERMINAL>N</NON_TERMINAL>
+                <NON_TERMINAL>SD</NON_TERMINAL>
+            </NON_TERMINALS>
+            <TERMINALS>
+                <TERMINAL>KPR</TERMINAL>
+                <TERMINAL>SSCOL0</TERMINAL>
+                <TERMINAL>KBG</TERMINAL>
+                <TERMINAL>KEN</TERMINAL>
+                <TERMINAL>ID</TERMINAL>
+                <TERMINAL>GRAMMAR_CONST_DESCRIPTION</TERMINAL>
+                <TERMINAL>GRAMMAR_VAR_DESCRIPTION</TERMINAL>
+                <TERMINAL>GRAMMAR_TYPE_DESCRIPTION</TERMINAL>
+                <TERMINAL>GRAMMAR_LAB_DESCRIPTION</TERMINAL>
+                <TERMINAL>KCON</TERMINAL>
+                <TERMINAL>KVAR</TERMINAL>
+                <TERMINAL>KTYP</TERMINAL>
+                <TERMINAL>KLAB</TERMINAL>
+                <TERMINAL>GRAMMAR_OPERATOR_SET</TERMINAL>
+                <TERMINAL>SP0</TERMINAL>
+            </TERMINALS>
+            <RULES>
+                <RULE id="1">
+                    <LEFT>S</LEFT>
+                    <RIGHT id="1">KPR</RIGHT>
+                    <RIGHT id="2">N</RIGHT>
+                    <RIGHT id="3">SSCOL0</RIGHT>
+                    <RIGHT id="4">SD</RIGHT>
+                    <RIGHT id="5">KBG</RIGHT>
+                    <RIGHT id="6">GRAMMAR_OPERATOR_SET</RIGHT>
+                    <RIGHT id="7">KEN</RIGHT>
+                    <RIGHT id="8">SP0</RIGHT>
+                </RULE>
+                <RULE id="2">
+                    <LEFT>N</LEFT>
+                    <RIGHT id="1">ID</RIGHT>
+                </RULE>
+                <RULE id="3">
+                    <LEFT>SD</LEFT>
+                    <RIGHT id="1">KCON</RIGHT>
+                    <RIGHT id="2">GRAMMAR_CONST_DESCRIPTION</RIGHT>
+                    <RIGHT id="3">SD</RIGHT>
+                </RULE>
+                <RULE id="4">
+                    <LEFT>SD</LEFT>
+                    <RIGHT id="1">KVAR</RIGHT>
+                    <RIGHT id="2">GRAMMAR_VAR_DESCRIPTION</RIGHT>
+                    <RIGHT id="3">SD</RIGHT>
+                </RULE>
+                <RULE id="5">
+                    <LEFT>SD</LEFT>
+                    <RIGHT id="1">KTYP</RIGHT>
+                    <RIGHT id="2">GRAMMAR_TYPE_DESCRIPTION</RIGHT>
+                    <RIGHT id="3">SD</RIGHT>
+                </RULE>
+                <RULE id="6">
+                    <LEFT>SD</LEFT>
+                    <RIGHT id="1">KLAB</RIGHT>
+                    <RIGHT id="2">GRAMMAR_LAB_DESCRIPTION</RIGHT>
+                    <RIGHT id="3">SD</RIGHT>
+                </RULE>
+                <RULE id="7">
+                    <LEFT>SD</LEFT>
+                    <RIGHT id="1">eps</RIGHT>
+                </RULE>
+            </RULES>
+            <START>S</START>
+        </GRAMMAR>
+    </GRAMMARS>
+</XML>

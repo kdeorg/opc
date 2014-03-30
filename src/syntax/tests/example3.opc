@@ -1,0 +1,7 @@
+program hello;
+var a: Integer;
+begin
+if a = -111 then a := a + a
+else b := b + b;
+writeln(a.denominator);
+end.

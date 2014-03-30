@@ -1,0 +1,15 @@
+program hello;
+begin
+if x = -111 then a := a + a
+else c:= d;
+writeln(m.denominator);
+read(a[a[i].denominator + a[a[i,m]]]);
+for x:=1+10 to 100-90 do
+begin
+	x:=y;
+	if x >= 10 then
+	k.numerator := -b.denominator;
+end;
+for x:=0 to 100 do
+x:=10;
+end.

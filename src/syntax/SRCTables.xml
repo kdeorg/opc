@@ -1,0 +1,228 @@
+<XML>
+    <KEYWORDS>
+        <keyword id="1">
+            <type>KARR</type>
+            <name>array</name>
+        </keyword>
+        <keyword id="2">
+            <type>KOF</type>
+            <name>of</name>
+        </keyword>
+        <keyword id="3">
+            <type>KBG</type>
+            <name>begin</name>
+        </keyword>
+        <keyword id="4">
+            <type>KEN</type>
+            <name>end</name>
+        </keyword>
+        <keyword id="5">
+            <type>KIF</type>
+            <name>if</name>
+        </keyword>
+        <keyword id="6">
+            <type>KTH</type>
+            <name>then</name>
+        </keyword>
+        <keyword id="7">
+            <type>KEL</type>
+            <name>else</name>
+        </keyword>
+        <keyword id="8">
+            <type>KFR</type>
+            <name>for</name>
+        </keyword>
+        <keyword id="9">
+            <type>KTO</type>
+            <name>to</name>
+        </keyword>
+        <keyword id="10">
+            <type>KDO</type>
+            <name>do</name>
+        </keyword>
+        <keyword id="11">
+            <type>KGO</type>
+            <name>goto</name>
+        </keyword>
+        <keyword id="12">
+            <type>KCON</type>
+            <name>const</name>
+        </keyword>
+        <keyword id="13">
+            <type>KVAR</type>
+            <name>var</name>
+        </keyword>
+        <keyword id="14">
+            <type>KLAB</type>
+            <name>label</name>
+        </keyword>
+        <keyword id="15">
+            <type>KTYP</type>
+            <name>type</name>
+        </keyword>
+        <keyword id="16">
+            <type>KOR</type>
+            <name>or</name>
+        </keyword>
+        <keyword id="17">
+            <type>KAND</type>
+            <name>and</name>
+        </keyword>
+        <keyword id="18">
+            <type>KNOT</type>
+            <name>not</name>
+        </keyword>
+        <keyword id="19">
+            <type>KRD</type>
+            <name>read</name>
+        </keyword>
+        <keyword id="20">
+            <type>KRDL</type>
+            <name>readln</name>
+        </keyword>
+        <keyword id="21">
+            <type>KWT</type>
+            <name>write</name>
+        </keyword>
+        <keyword id="22">
+            <type>KWTL</type>
+            <name>writeln</name>
+        </keyword>
+        <keyword id="23">
+            <type>KNUM</type>
+            <name>numerator</name>
+        </keyword>
+        <keyword id="24">
+            <type>KDEN</type>
+            <name>denominator</name>
+        </keyword>
+        <keyword id="25">
+            <type>KINT</type>
+            <name>int</name>
+        </keyword>
+        <keyword id="26">
+            <type>KFRC</type>
+            <name>frac</name>
+        </keyword>
+        <keyword id="27">
+            <type>KIMP</type>
+            <name>improper</name>
+        </keyword>
+        <keyword id="28">
+            <type>KSIM</type>
+            <name>simple</name>
+        </keyword>
+        <keyword id="29">
+            <type>KCDM</type>
+            <name>comden</name>
+        </keyword>
+        <keyword id="30">
+            <type>KPR</type>
+            <name>program</name>
+        </keyword>
+    </KEYWORDS>
+    <OPERATORS>
+        <operator id="1">
+            <type>OPAR</type>
+            <name>+</name>
+        </operator>
+        <operator id="2">
+            <type>OPAR</type>
+            <name>-</name>
+        </operator>
+        <operator id="1">
+            <type>OPMUL</type>
+            <name>*</name>
+        </operator>
+        <operator id="2">
+            <type>OPMUL</type>
+            <name>/</name>
+        </operator>
+        <operator id="1">
+            <type>OPDPS</type>
+            <name>..</name>
+        </operator>
+        <operator id="1">
+            <type>OPA</type>
+            <name>:=</name>
+        </operator>
+        <operator id="1">
+            <type>OPINIT</type>
+            <name>=</name>
+        </operator>
+        <operator id="1">
+            <type>OPCP</type>
+            <name>&gt;</name>
+        </operator>
+        <operator id="2">
+            <type>OPCP</type>
+            <name>&lt;</name>
+        </operator>
+        <operator id="3">
+            <type>OPCP</type>
+            <name>&lt;&gt;</name>
+        </operator>
+        <operator id="4">
+            <type>OPCP</type>
+            <name>&lt;=</name>
+        </operator>
+        <operator id="5">
+            <type>OPCP</type>
+            <name>&gt;=</name>
+        </operator>
+        <operator id="1">
+            <type>SP</type>
+            <name>.</name>
+        </operator>
+        <operator id="1">
+            <type>SCOL</type>
+            <name>:</name>
+        </operator>
+        <operator id="1">
+            <type>SPO</type>
+            <name>(</name>
+        </operator>
+        <operator id="1">
+            <type>SPC</type>
+            <name>)</name>
+        </operator>
+        <operator id="1">
+            <type>SBKO</type>
+            <name>[</name>
+        </operator>
+        <operator id="1">
+            <type>SBKC</type>
+            <name>]</name>
+        </operator>
+        <operator id="1">
+            <type>SBCO</type>
+            <name>{</name>
+        </operator>
+        <operator id="1">
+            <type>SBCC</type>
+            <name>}</name>
+        </operator>
+        <operator id="1">
+            <type>SCOM</type>
+            <name>,</name>
+        </operator>
+        <operator id="1">
+            <type>SSCOL</type>
+            <name>;</name>
+        </operator>
+    </OPERATORS>
+    <DATA_TYPES>
+        <data_type id="1">
+            <type>KTINT</type>
+            <name>Integer</name>
+        </data_type>
+        <data_type id="2">
+            <type>KTRAT</type>
+            <name>Rational</name>
+        </data_type>
+    </DATA_TYPES>
+    <IDS>
+    </IDS>
+    <CONSTANTS>
+    </CONSTANTS>
+</XML>

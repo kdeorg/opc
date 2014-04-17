@@ -1,7 +1,7 @@
 #ifndef XMLREADER_H
 #define XMLREADER_H
 #include <QFile>
-#include <QtXml/QXmlStreamReader>
+#include <QXmlStreamReader>
 #include <QMap>
 #include <qdebug.h>
 #include <iostream>

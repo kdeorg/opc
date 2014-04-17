@@ -220,10 +220,10 @@ int XMLReader::readGrammars(QString *filename){
                         if(readGrammar(&xmlFile, newGrammar)){
                             grammars->append(newGrammar);
                             qDebug() <<"New grammar: " <<newGrammar->getName() <<" succesfully appended" <<endl;
-                            getwchar();
+//                            getwchar();
                         }else{
                             qDebug() <<"Error reading grammar " <<newGrammar->getName() <<endl;
-                            getwchar();
+//                            getwchar();
                         }
                     }
                 }

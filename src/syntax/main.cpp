@@ -1,9 +1,4 @@
-#include <QApplication>
-#include "mainwindow.h"
-//#include <QCoreApplication>
-#include "xmlreader.h"
-#include "lex_analyzer.h"
-#include "syn_analyzer.h"
+#include "includes.h"
 
 int main(int argc, char *argv[])
 {
@@ -11,11 +6,27 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     MainWindow w;
 
-
+    QHBoxLayout *layout = new QHBoxLayout(&w);
     QTreeView *treeView = new QTreeView(&w);
-         w.setCentralWidget(treeView);
-         QStandardItemModel *standardModel = new QStandardItemModel ;
-         QStandardItem *rootNode = standardModel->invisibleRootItem();
+    treeView->move(0,0);
+    treeView->resize(500,600);
+
+    QTreeView *treeViewSemantic = new QTreeView(&w);
+    treeViewSemantic->resize(500,600);
+    treeViewSemantic->move(500,0);
+
+    QStandardItemModel *standardModel = new QStandardItemModel ;
+    QStandardItem *rootNode = standardModel->invisibleRootItem();
+
+    QStandardItemModel *standardModelSemantic = new QStandardItemModel ;
+    QStandardItem *rootNodeSemantic = standardModelSemantic->invisibleRootItem();
+
+    QTextEdit *txtTriads = new QTextEdit(&w);
+    txtTriads->resize(500,600);
+    txtTriads->move(1000,0);
+
+    w.resize(1500,600);
+    w.setLayout(layout);
 
     std::cout<< "Hello\n";
     QMap<QString, TokenType*> *keywords = new QMap<QString, TokenType*>;
@@ -26,6 +37,7 @@ int main(int argc, char *argv[])
     XMLReader *XMLR = new XMLReader(keywords, types, operators, ids, constants);
     XMLR->parse_XML("SRCTables.xml");
     Lex_analyzer * lex = new Lex_analyzer(keywords, types, operators, ids, constants);
+//    XMLR->writeTokensXML("Tokens-res.xml", lex->analyze("/home/user/gitdir/opc/src/build-SynTree-Desktop-Debug/example.opc"));
     XMLR->writeTokensXML("Tokens-res.xml", lex->analyze(argv[1]));
     XMLR->writeTablesXML("SRCTables-res.xml");
 
@@ -47,7 +59,7 @@ int main(int argc, char *argv[])
         gr->generateTable();
     }
     qDebug()<<"All grammars checked." <<endl;
-    getwchar();
+//    getwchar();
     grammars->at(0)->generateFIRST_SET_with_eps();
     grammars->at(6)->generateFIRST_SET_with_eps();
     grammars->at(6)->generateTable();
@@ -103,6 +115,16 @@ int main(int argc, char *argv[])
          //register the model
          treeView->setModel(standardModel);
          treeView->expandAll();
+
+
+//         QStandardItem *startItem = new QStandardItem("start");
+//         rootNodeSemantic->appendRow(startItem);
+
+         SemanticAnalyser *anal = new SemanticAnalyser(rootNodeSemantic);
+         anal->process(rootNode,txtTriads);
+
+         treeViewSemantic->setModel(standardModelSemantic);
+         treeViewSemantic->expandAll();
 
          //selection changes shall trigger a slot
          //QItemSelectionModel *selectionModel= treeView->selectionModel();

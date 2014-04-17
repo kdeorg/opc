@@ -1,4 +1,5 @@
 #include "lex_analyzer.h"
+#include <QChar>
 
 Lex_analyzer::Lex_analyzer(QMap<QString, TokenType*> *keywords,
                            QMap<QString, TokenType*> *types,
@@ -140,15 +141,15 @@ int Lex_analyzer::getLiterType(QChar c){
 }
 
 int Lex_analyzer::is_letter(QChar c){
-    if((c.toAscii() > 64 && c.toAscii() < 91)
-            ||(c.toAscii() > 96 && c.toAscii() < 123))
+    if((c.toLatin1() > 64 && c.toLatin1() < 91)
+            ||(c.toLatin1() > 96 && c.toLatin1() < 123))
         return 1;
     else
         return 0;
 }
 
 int Lex_analyzer::is_digit(QChar c){
-    if(c.toAscii() > 47 && c.toAscii() < 58)
+    if(c.toLatin1() > 47 && c.toLatin1() < 58)
         return 1;
     else
         return 0;

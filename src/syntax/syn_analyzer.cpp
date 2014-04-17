@@ -97,8 +97,9 @@ int Syn_analyzer::analyze(){
             if(t == b && tok_changed_buf == ""){
                 qDebug() <<"Throw!";
                 thrown = 1;
-                QStandardItem *newItem = new QStandardItem(curToken->value);
-                currentRoot->appendRow(newItem);
+//                QStandardItem *newItem = new QStandardItem(">>"+curToken->value);
+//                currentRoot->appendRow(newItem);
+                currentRoot->setToolTip(curToken->value);
             }
             else{
                 if(t == b){
